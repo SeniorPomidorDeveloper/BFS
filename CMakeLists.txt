@@ -1,6 +1,6 @@
 set(CMAKE_SHARED_LIBRARY_PREFIX "")
 
-set(MYCOMPILE_FLAGS "-Wall -Wextra -g")
+add_compile_options(-Wall -Wextra -g)
 
 add_executable(run main.cpp)
 

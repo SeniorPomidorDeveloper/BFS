@@ -10,6 +10,7 @@
     size_t size;
     in >> size;
     myGraph::graph gr{size}; // Инициализируем граф
+    in >> size;
     for (;size > 0; --size) // заполняем рёбра
     {
         size_t node1;
