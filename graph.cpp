@@ -19,7 +19,7 @@ void myGraph::graph::addEdge(const size_t node1, const size_t node2)
     adjacencyMatrix[node2].push_back(node1);
 }
 
-std::vector<size_t> myGraph::graph::bfs(const size_t start)
+[[nodiscard]] std::vector<size_t> myGraph::graph::bfs(const size_t start)
 {
     std::vector<size_t> distances(adjacencyMatrix.size(), std::numeric_limits<size_t>::max());
     std::queue<size_t> q;

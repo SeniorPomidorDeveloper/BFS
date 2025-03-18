@@ -14,7 +14,7 @@ namespace myGraph
         
         void addEdge(const size_t node1, const size_t node2);
 
-        std::vector<size_t> bfs(const size_t node);
+        [[nodiscard]] std::vector<size_t> bfs(const size_t node);
     };
 }
 
