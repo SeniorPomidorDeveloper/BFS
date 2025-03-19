@@ -21,6 +21,7 @@ void myGraph::graph::addEdge(const size_t node1, const size_t node2)
 
 [[nodiscard]] std::vector<size_t> myGraph::graph::bfs(const size_t start)
 {
+    if (start >= adjacencyMatrix.size()) throw std::out_of_range("There are no such nodes!"); // Если таких узлов не существует возвращаем исключение
     std::vector<size_t> distances(adjacencyMatrix.size(), std::numeric_limits<size_t>::max());
     std::queue<size_t> q;
     q.push(start);

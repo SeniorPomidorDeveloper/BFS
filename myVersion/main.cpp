@@ -28,7 +28,11 @@ int main()
     try
     {
         std::ifstream in{"graph.txt"}; // Открываем файл graph.txt
-        if (!in.is_open()) return 1; // Если программа не смогла открыть этот файл завершаем программу с кодом ошибки 1
+        if (!in.is_open())
+        {
+            std::cerr << "Error opening file!" << std::endl; // Если программа не смогла открыть этот файл выдаём ошибку
+            return 1;
+        }
         myGraph::graph gr{fileToMyGraph(in)};
         size_t start;
         in >> start;
@@ -41,6 +45,6 @@ int main()
     }
     catch(const std::exception& e)
     {
-        std::cerr << "Error: " << e.what() << '\n';
+        std::cerr << "Error: " << e.what() << std::endl;
     }
 }
