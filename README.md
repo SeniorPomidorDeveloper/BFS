@@ -5,7 +5,7 @@
 ```
 mkdir ./myVersion/build
 cd ./myVersion/build
-cdmake ..
+cmake ..
 make
 ```
 
